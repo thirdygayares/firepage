@@ -19,8 +19,6 @@ export class ExportPdfService {
 
     // Render the container as a single HTML element into the PDF
     pdf.html(container, {
-      x: 10,
-      y: 10,
       width: pdf.internal.pageSize.getWidth(),
       html2canvas: {
         useCORS: true,
@@ -30,7 +28,7 @@ export class ExportPdfService {
       callback: () => {
         pdf.save('exported-file.pdf');
       }
-      
+
     });
   }
 }
