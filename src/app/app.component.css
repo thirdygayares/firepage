@@ -1,21 +1,38 @@
-.container {
+p{
+  font-size: 5px;
+}
+
+.page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+  zoom: 3;
 }
 
 
 .board {
-  width: 630px;
-  height: 630px;
+  width: 55.1mm;
+  height: 78mm;
   background-color: #e0e0e0;
-  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #ccc;
 }
 button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+
+.toolbar {
+  position: fixed;
+  z-index: 1;
+}
+
+button {
+  display: block;
   padding: 10px 20px;
   font-size: 16px;
 }

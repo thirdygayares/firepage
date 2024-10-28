@@ -1,10 +1,16 @@
-<div class="container">
-  <div *ngFor="let page of pages; let i = index">
+<div class="toolbar">
+  <button (click)="addPage()">ADD PAGE</button>
+  <button (click)="exportPDF()">EXPORT PDF</button>
+</div>
+
+
+<div class="page-container">
+  <div *ngFor="let page of pages; let i = index" class="board-container" [id]="'board-' + i" #pageElement>
     <div class="board" [id]="'board-' + i">
-      <h2>HELLO WORLD</h2>
+      <p>HELLO WORLD {{i}}</p>
     </div>
   </div>
-  <button (click)="addPage()">ADD PAGE</button>
 
 </div>
+
 
