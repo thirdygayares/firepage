@@ -14,6 +14,4 @@ jobs:
         run: |
           npm install -g @commitlint/config-conventional @commitlint/cli
           git log --pretty=format:%s ${{ github.event.before }}..${{ github.sha }} | commitlint
-    ```
 
-This workflow checks commit messages in the pull request to `dev` for proper formatting.
