@@ -11,6 +11,7 @@ import { ExportPdfService } from './services/export-pdf.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'firepage';
   pages: number[] = [0]; // Initial page
 
   @ViewChildren('pageElement') pageElements!: QueryList<ElementRef>;
