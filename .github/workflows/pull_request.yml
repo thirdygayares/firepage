@@ -1,0 +1,19 @@
+name: Enforce Semantic Commits and Tests on PR to Dev
+
+on:
+  pull_request:
+    branches:
+      - dev
+
+jobs:
+  lint-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint Commits
+        run: |
+          npm install -g @commitlint/config-conventional @commitlint/cli
+          git log --pretty=format:%s ${{ github.event.before }}..${{ github.sha }} | commitlint
+    ```
+
+This workflow checks commit messages in the pull request to `dev` for proper formatting.
